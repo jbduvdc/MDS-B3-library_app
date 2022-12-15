@@ -12,12 +12,29 @@ class BookController extends AbstractController
     #[Route('/books', name: 'books_home')]
     public function home(): Response
     {
-        return $this->render('books/index.html.twig');
+        $title = "Tous les livres";
+        return $this->render('books/index.html.twig', [
+            "title" => $title
+        ]);
     }
+
+    #[Route('/books/{id}', name: 'books_single')]
+    public function single_book($id): Response
+    {
+        $title = "Mon livre";
+        return $this->render('books/single.html.twig', [
+            "title" => $title,
+            "id" => $id
+        ]);
+    }
+
 
     #[Route('/contact', name: 'books_contact')]
     public function contact(): Response
     {
-        return $this->render('books/contact.html.twig');
+        $title = "Me contacter";
+        return $this->render('books/contact.html.twig', [
+            "title" => $title
+        ]);
     }
 }

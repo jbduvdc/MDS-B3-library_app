@@ -6,7 +6,16 @@
 
   <ul>
   {% for book in books %}
-    <li>{{book.title}} écrit par {{book.author}}</li>
+    <li>
+      {{book.title}} écrit par {{book.author}} 
+      / {{ book.price }} euros
+      
+      {% if book.price >= 30 %} 
+        <button>Acheter en 3 fois</button>
+      {% else %} 
+        <button>Payer maintenant</button>
+      {% endif %}
+    </li>
   {% endfor %}
   </ul>
 

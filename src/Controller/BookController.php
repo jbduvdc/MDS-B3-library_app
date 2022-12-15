@@ -15,9 +15,9 @@ class BookController extends AbstractController
         $title = "Tous les livres";
 
         $books = [
-        ['category' => 'Low fantasy', 'title' => 'Harry Potter', 'author' => 'J. K. Rowling', 'date'=>'9 octobre 1998'],
-        ['category' => 'Southern gothic', 'title' => '16 lunes', 'author' => ' Kami Garcia et Margaret Stohl', 'date'=> '1er décembre 2009'],
-        ['category' => 'Science-fiction', 'title' => 'Le Labyrinthe', 'author' => 'James Dashner', 'date'=> '21 octobre 2009']
+        ['category' => 'Low fantasy', 'title' => 'Harry Potter', 'author' => 'J. K. Rowling', 'date'=>'9 octobre 1998', 'price' => 24],
+        ['category' => 'Southern gothic', 'title' => '16 lunes', 'author' => ' Kami Garcia et Margaret Stohl', 'date'=> '1er décembre 2009', 'price' => 42],
+        ['category' => 'Science-fiction', 'title' => 'Le Labyrinthe', 'author' => 'James Dashner', 'date'=> '21 octobre 2009', 'price' => 17.5]
     ];
 
         return $this->render('books/index.html.twig', [

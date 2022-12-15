@@ -3,4 +3,11 @@
 
 {% block body %}
   <h1>Tous les livres!</h1>
+
+  <ul>
+  {% for book in books %}
+    <li>{{book.title}} écrit par {{book.author}}</li>
+  {% endfor %}
+  </ul>
+
 {% endblock %}
